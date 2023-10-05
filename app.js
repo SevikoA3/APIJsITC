@@ -17,7 +17,7 @@ eventEmitter.on('run', () => {
                     res.end('<h1>Hello World!</h1>');
                 } 
                 catch (error) {
-                    console.log("There is an error:", error);    
+                    console.log("There is an error:", error.message);    
                 }
             }
             else if (pathName == '/users') {
@@ -28,7 +28,7 @@ eventEmitter.on('run', () => {
                     res.end(JSON.stringify(users));
                 } 
                 catch (error) {
-                    console.log("There is an error:", error);    
+                    console.log("There is an error:", error.message);    
                 }
                 
             }
@@ -40,7 +40,7 @@ eventEmitter.on('run', () => {
                     res.end(JSON.stringify(failed404));
                 }
                 catch (error) {
-                    console.log("There is an error:", error);
+                    console.log("There is an error:", error.message);
                 }
                 
             }
@@ -53,7 +53,7 @@ eventEmitter.on('run', () => {
                 res.end(JSON.stringify(failed405));
             }
             catch (error) {
-                console.log("There is an error:", error);
+                console.log("There is an error:", error.message);
             }
         }
     });
